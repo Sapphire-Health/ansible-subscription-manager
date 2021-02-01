@@ -1,0 +1,9 @@
+---
+  galaxy_info:
+    role_name: ansible-subscription-manager
+    author: Lyas Spiehler
+    description: Ansible role to manage registration and subscriptions with RHSM
+    company: Sapphire Health
+  collections: []
+  dependencies: []
+...
