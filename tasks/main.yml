@@ -13,5 +13,9 @@
       server_hostname: "{{ rhsm.server_hostname }}"
       activationkey: "{{ rhsm.activationkey }}"
       org_id: "{{ rhsm.org_id }}"
-      pool: "{{ rhsm.pool }}"
+      pool_ids: "{{ rhsm.pool_ids }}"
     when: rhsm is defined
+    register: rhsm
+  - name: Show registration return value
+    ansible.builtin.debug:
+      msg: "{{ rhsm }}"
