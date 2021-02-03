@@ -16,6 +16,11 @@
       pool_ids: "{{ rhsm.pool_ids }}"
     when: rhsm is defined
     register: rhsm
-  - name: Show registration return value
-    ansible.builtin.debug:
-      msg: "{{ rhsm }}"
+  #- name: Show registration return value
+  #  ansible.builtin.debug:
+  #    msg: "{{ rhsm }}"
+  - name: Install Katello agent
+    yum:
+      name:
+        - katello-agent
+        - insights-client
